@@ -17,7 +17,7 @@ async function Results({ searchParams }: { searchParams: PageProps<"/search">["s
         {items.length} {items.length === 1 ? "result" : "results"}
       </p>
       {items.length === 0 ? (
-        <p className="mt-10 text-ink/65">Nothing matches that. Try a colorway like “Glacier” or “Midnight”.</p>
+        <p className="mt-10 text-ink/65">Nothing matches that. Try a colorway like “Ice” or “Ash”.</p>
       ) : (
         <ul className="mt-10 grid grid-cols-2 gap-x-4 gap-y-12 lg:grid-cols-4">
           {items.map((p) => (

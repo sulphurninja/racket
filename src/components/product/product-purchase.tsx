@@ -10,6 +10,7 @@ import { AvailabilityLabel, DevNotice, Price } from "@/components/ui/primitives"
 import { QuantitySelector } from "@/components/ui/quantity";
 import { COLORWAYS } from "@/config/colorways";
 import { addToCart } from "@/lib/cart/add-to-cart";
+import { productAsset } from "@/lib/catalog/media";
 import { MAX_LINE_QUANTITY } from "@/lib/cart/totals";
 import type { ProductCardData, ProductMedia, ProductVariant } from "@/lib/catalog/types";
 import { variantAvailability } from "@/lib/catalog/product-utils";
@@ -108,7 +109,7 @@ export function ProductPurchase({ product, family }: { product: PurchaseProduct;
                     <ProductImage
                       media={
                         c && p.primary
-                          ? { ...p.primary, url: `/products/racket75-${c.id}-front.webp`, alt: `RACKET K75 in ${c.name}, front view` }
+                          ? { ...p.primary, url: productAsset(`/products/racket75-${c.id}-front.webp`), alt: `RACKET K75 in ${c.name}, front view` }
                           : p.primary
                       }
                       fit="contain"

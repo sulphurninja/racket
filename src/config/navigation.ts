@@ -1,5 +1,6 @@
 import { COLORWAYS, SHOWCASE_COLORWAYS } from "@/config/colorways";
 import { STACK_COLLECTIONS } from "@/lib/catalog/collections";
+import { productAsset } from "@/lib/catalog/media";
 import type { ImageAsset } from "@/lib/catalog/types";
 
 export type NavLink = { label: string; href: string; swatch?: string; note?: string };
@@ -45,8 +46,8 @@ export const NAV: NavItem[] = [
       caption: "75%. Gasket mount. Hot-swap. Four colorways.",
       href: "/collections/keyboards",
       image: {
-        url: "/products/racket75-glacier-studio.webp",
-        alt: "RACKET K75 in Glacier Blue",
+        url: productAsset("/products/racket75-glacier-studio.webp"),
+        alt: "RACKET K75 in Ice",
         width: 2000,
         height: 2000,
       },
@@ -72,7 +73,7 @@ export const NAV: NavItem[] = [
       href: "/collections/daydream",
       image: {
         url: "/collections/daydream.webp",
-        alt: "RACKET K75 Cloud Blue on an anime sky-art desk mat",
+        alt: "RACKET K75 in Sky on an anime sky-art desk mat",
         width: 2000,
         height: 1116,
       },
@@ -105,7 +106,7 @@ export const NAV: NavItem[] = [
       caption: "Chairs, desks, mats. The list hears first.",
       href: "/#drops",
       image: {
-        url: "/products/racket75-cedar-lifestyle.webp",
+        url: productAsset("/products/racket75-cedar-lifestyle.webp"),
         alt: "RACKET K75 on a desk setup",
         width: 2000,
         height: 1493,

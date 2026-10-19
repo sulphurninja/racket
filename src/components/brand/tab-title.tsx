@@ -7,10 +7,10 @@ import { useEffect } from "react";
 const AWAY = [
   "⌨️ Make some noise",
   "✨ Your desk is waiting",
-  "🖤 Midnight is still on",
-  "🧊 Glacier hasn't moved",
-  "🌿 Cedar is warming up",
-  "☁️ Cloud is still here",
+  "🖤 Ash is still on",
+  "🧊 Ice hasn't moved",
+  "🍵 Matcha is steeping",
+  "☁️ Sky is still here",
   "🎧 Come back to the board",
   "💎 The first run is small",
 ];

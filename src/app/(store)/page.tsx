@@ -11,6 +11,7 @@ import { ArrowGlyph, Button } from "@/components/ui/button";
 import { COLORWAYS, type ColorwayId } from "@/config/colorways";
 import { STACK_COLLECTIONS } from "@/lib/catalog/collections";
 import { getAllProducts, getFeaturedProducts } from "@/lib/catalog/repository";
+import { productAsset } from "@/lib/catalog/media";
 import { productImages } from "@/lib/catalog/seed-data";
 import { defaultVariant, productColorways } from "@/lib/catalog/product-utils";
 import { cn } from "@/lib/utils";
@@ -102,7 +103,7 @@ export default async function HomePage() {
       priceMinor: defaultVariant(p).priceMinor,
       priceConfirmed: p.priceConfirmed,
       image: {
-        url: `/products/racket75-${c}-front.webp`,
+        url: productAsset(`/products/racket75-${c}-front.webp`),
         alt: `RACKET K75 in ${COLORWAYS[c].name}, front view`,
       },
     };

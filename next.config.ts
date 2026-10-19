@@ -7,6 +7,11 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [{ protocol: "https", hostname: "res.cloudinary.com" }],
+    localPatterns: [
+      { pathname: "/**", search: "" },
+      { pathname: "/products/**", search: "?v=2" },
+      { pathname: "/products/**", search: "?v=3" },
+    ],
   },
   turbopack: {
     rules: {

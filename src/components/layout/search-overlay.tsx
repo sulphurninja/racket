@@ -12,7 +12,7 @@ import { COLORWAYS } from "@/config/colorways";
 import type { ProductCardData } from "@/lib/catalog/types";
 import { useUIStore } from "@/stores/ui-store";
 
-const SUGGESTIONS = ["Cedar Green", "Glacier", "RGB", "Midnight", "Hot-swap"];
+const SUGGESTIONS = ["Matcha", "Ice", "RGB", "Ash", "Hot-swap"];
 
 export function SearchOverlay() {
   const open = useUIStore((s) => s.searchOpen);
@@ -92,7 +92,7 @@ export function SearchOverlay() {
 
         <p className="type-eyebrow mb-4 text-ink/45">{q ? `Results for “${q}”` : "The lineup"}</p>
         {q && !loading && results.length === 0 ? (
-          <p className="py-6 text-ink/60">Nothing matches “{q}”. Try a colorway like “Glacier” or “Midnight”.</p>
+          <p className="py-6 text-ink/60">Nothing matches “{q}”. Try a colorway like “Ice” or “Ash”.</p>
         ) : (
           <ul className="grid grid-cols-2 gap-4 md:grid-cols-4">
             <AnimatePresence mode="popLayout" initial={false}>

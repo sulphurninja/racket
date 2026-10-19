@@ -32,7 +32,13 @@ export function searchScore(product: Product, rawQuery: string): number {
   const terms = q.split(" ");
   const title = normalize(product.title);
   const meta = normalize(
-    [product.family, product.category, product.subcategory, product.tagline, ...productColorways(product).map((c) => COLORWAYS[c].name)].join(" "),
+    [
+      product.family,
+      product.category,
+      product.subcategory,
+      product.tagline,
+      ...productColorways(product).flatMap((c) => [COLORWAYS[c].name, COLORWAYS[c].shortName, c]),
+    ].join(" "),
   );
   const body = normalize(
     [product.summary, ...product.description, ...product.specs.flatMap((g) => g.rows.map((r) => r.value))].join(" "),

@@ -19,7 +19,7 @@ export type HeroSlide = {
 
 const TAB_MARK: Record<ColorwayId, string> = {
   glacier: "🧊",
-  cedar: "🌿",
+  cedar: "🍵",
   cloud: "☁️",
   midnight: "🖤",
 };
