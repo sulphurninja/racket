@@ -278,7 +278,7 @@ export default async function HomePage() {
                 Same board. Four rooms. The desk is the rest of the sentence.
               </p>
             </div>
-            <ul className="grid grid-cols-2 gap-3 lg:col-span-7">
+            <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-3 lg:col-span-7">
             {showcase.map((s, i) => {
               const cw = COLORWAYS[s.colorway];
               return (
@@ -290,7 +290,7 @@ export default async function HomePage() {
                         src={s.lifestyle.url}
                         alt={s.lifestyle.alt}
                         fill
-                        sizes="(min-width: 640px) 50vw, 100vw"
+                        sizes="(min-width: 768px) 36vw, 100vw"
                         className="object-cover transition-transform duration-[1400ms] ease-[var(--ease-out-expo)] group-hover:scale-[1.04]"
                       />
                     </div>
