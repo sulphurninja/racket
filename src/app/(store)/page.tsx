@@ -17,7 +17,6 @@ import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
-  openGraph: { url: "/" },
 };
 
 /** Ticker copy. Alternates solid and outlined for rhythm. */

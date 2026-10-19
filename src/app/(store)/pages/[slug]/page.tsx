@@ -66,7 +66,12 @@ export async function generateMetadata({ params }: PageProps<"/pages/[slug]">): 
     title: page.title,
     description: page.intro,
     alternates: { canonical: `/pages/${slug}` },
-    openGraph: { url: `/pages/${slug}`, title: page.title, description: page.intro },
+    openGraph: {
+      url: `/pages/${slug}`,
+      title: page.title,
+      description: page.intro,
+      images: [{ url: "/opengraph-image.jpg", width: 1200, height: 630, alt: "RACKET K75", type: "image/jpeg" }],
+    },
   };
 }
 

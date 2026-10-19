@@ -64,19 +64,36 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  // OG/Twitter images come from app/opengraph-image.png + app/twitter-image.png (file convention).
   authors: [{ name: "RACKET", url: siteConfig.url }],
   openGraph: {
     type: "website",
     siteName: "RACKET",
     locale: "en_IN",
+    url: "/",
     title: "RACKET · Mechanical Keyboards & Desk Setup Gear",
     description: siteConfig.description,
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "RACKET. The K75 in Glacier, Cedar, Cloud, and Midnight beside the metal RACKET lockup on a light paper backdrop.",
+        type: "image/jpeg",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "RACKET · Mechanical Keyboards & Desk Setup Gear",
     description: siteConfig.description,
+    images: [
+      {
+        url: "/twitter-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "RACKET. The K75 in Glacier, Cedar, Cloud, and Midnight beside the metal RACKET lockup on a light paper backdrop.",
+      },
+    ],
   },
 };
 
