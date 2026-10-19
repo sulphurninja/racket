@@ -11,7 +11,7 @@ import { defaultVariant, productColorways } from "@/lib/catalog/product-utils";
 import { getAllProducts } from "@/lib/catalog/repository";
 
 export default async function StoreLayout({ children }: LayoutProps<"/">) {
-  // Real first-run stock for the drop ticker — honest hype only.
+  // Real first-run stock for the drop ticker. Honest hype only.
   const products = await getAllProducts();
   const alerts: DropAlert[] = products
     .map((p) => {

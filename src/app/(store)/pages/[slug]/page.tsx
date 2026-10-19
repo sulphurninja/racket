@@ -13,8 +13,8 @@ const PAGES: Record<string, { title: string; intro: string; body: string[] }> = 
     title: "About RACKET",
     intro: "Make some noise.",
     body: [
-      "RACKET is a setup brand for gamers, streamers, coders, students, the nine-to-five — anyone who lives at a desk and wants it to feel, and look, like theirs. Everybody needs a desk upgrade. Keyboards are chapter one. Chairs, desks and the rest of the room are on the way.",
-      "We start with colorways we'd put on our own desks and pair them with boards that feel as good as they sound — gasket-mounted, hot-swappable, lit from below. No filler products, no fake discounts, no noise that isn't the good kind.",
+      "RACKET is a setup brand for gamers, streamers, coders, students, the nine-to-five. Anyone who lives at a desk and wants it to feel, and look, like theirs. Everybody needs a desk upgrade. Keyboards are chapter one. Chairs, desks and the rest of the room are on the way.",
+      "We start with colorways we'd put on our own desks and pair them with boards that feel as good as they sound. Gasket-mounted, hot-swappable, lit from below. No filler products, no fake discounts, no noise that isn't the good kind.",
     ],
   },
   shipping: {

@@ -3,16 +3,16 @@
 import { useEffect } from "react";
 import { useUIStore } from "@/stores/ui-store";
 
-/** Real first-run stock, passed down from the server catalog — never invented numbers. */
+/** Real first-run stock, passed down from the server catalog. Never invented numbers. */
 export type DropAlert = { slug: string; name: string; stock: number; image?: { url: string; alt: string } };
 
 const FIRST_DELAY = 9_000;
 const MIN_GAP = 28_000;
 const MAX_GAP = 48_000;
 
-/** Copy pool — all statements stay true to the seeded first-run stock. */
+/** Copy pool. All statements stay true to the seeded first-run stock. */
 const LINES = [
-  (a: DropAlert) => ({ title: "Low-key limited.", description: `${a.name} — first run capped at ${a.stock} units.` }),
+  (a: DropAlert) => ({ title: "Low-key limited.", description: `${a.name}. First run capped at ${a.stock} units.` }),
   (a: DropAlert) => ({ title: `${a.name}.`, description: `Only ${a.stock} boards in the first run. Cop early, flex forever.` }),
   (a: DropAlert) => ({ title: "One batch. That's the run.", description: `${a.stock} units of the ${a.name} exist right now.` }),
 ];

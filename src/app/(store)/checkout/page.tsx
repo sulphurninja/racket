@@ -15,7 +15,7 @@ export default function CheckoutPage() {
       <Emblem className="w-14 opacity-80" title={null} />
       <h1 className="type-display mt-8 text-[clamp(2.6rem,6vw,5rem)]">Checkout is loading.</h1>
       <p className="mt-5 max-w-md text-[15px] leading-relaxed text-ink/65">
-        The drop hasn&apos;t started — we&apos;re not taking payments yet. Your cart stays saved on this device, locked
+        The drop hasn&apos;t started. We&apos;re not taking payments yet. Your cart stays saved on this device, locked
         and loaded for day one.
       </p>
       <div className="mt-9 flex flex-wrap justify-center gap-3">

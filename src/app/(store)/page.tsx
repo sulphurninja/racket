@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: { url: "/" },
 };
 
-/** Ticker copy — alternates solid and outlined for rhythm. */
+/** Ticker copy. Alternates solid and outlined for rhythm. */
 const FEATURES = [
   "Make some noise",
   "Thock certified",
@@ -34,7 +34,7 @@ const FEATURES = [
   "Every desk deserves better",
 ];
 
-/** Categories in the pipeline. Concept imagery only — no fake products, no fake prices. */
+/** Categories in the pipeline. Concept imagery only. No fake products, no fake prices. */
 const NEXT_UP = [
   {
     title: "Gaming chairs",
@@ -53,7 +53,7 @@ const NEXT_UP = [
   },
   {
     title: "Workspace",
-    blurb: "Risers, trays, cables — the details.",
+    blurb: "Risers, trays, cables. The details.",
     image: { url: "/categories/workspace.webp", alt: "Headphone stand with underglow and a coiled cable on a dark desk" },
   },
 ] as const;
@@ -61,19 +61,19 @@ const NEXT_UP = [
 const HIGHLIGHTS: { colorway: ColorwayId; eyebrow: string; title: string; body: string }[] = [
   {
     colorway: "cedar",
-    eyebrow: "01 — Feel",
+    eyebrow: "Feel",
     title: "Softly sprung.",
     body: "A gasket structure and a single-key slotted PCB give every press a little cushion instead of a hard bottom-out.",
   },
   {
     colorway: "midnight",
-    eyebrow: "02 — Sound",
+    eyebrow: "Sound",
     title: "Five layers deep.",
     body: "Five layers of noise reduction inside the case keep the sound full and round. Loud in the good way.",
   },
   {
     colorway: "cloud",
-    eyebrow: "03 — Light",
+    eyebrow: "Light",
     title: "Lit from below.",
     body: "RGB backlighting glows up through the keycaps and case edges. Turn it up for the stream, down for the late night.",
   },
@@ -237,7 +237,7 @@ export default async function HomePage() {
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <div className={cn("absolute inset-x-0 bottom-0", big ? "p-7 md:p-10" : "p-6 md:p-7")}>
-                      <p className="type-eyebrow text-paper/60">{h.eyebrow.replace(/^\d+ — /, "")}</p>
+                      <p className="type-eyebrow text-paper/60">{h.eyebrow}</p>
                       <h3 className={cn("type-display mt-3", big ? "text-[clamp(2.4rem,4.6vw,4.25rem)]" : "text-3xl md:text-4xl")}>
                         {h.title}
                       </h3>
@@ -312,7 +312,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Next up — future categories */}
+      {/* Next up. Future categories */}
       <section id="next-up" className="container-racket scroll-mt-20 py-24 md:py-32">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
@@ -321,7 +321,7 @@ export default async function HomePage() {
             </p>
             <RevealLines lines={["The whole room", "is coming."]} className="type-display mt-5 text-[clamp(2.6rem,7vw,6.5rem)]" />
             <p className="mt-5 max-w-md text-[15px] leading-relaxed text-ink/65">
-              Keyboards were just the opening move. The rest of the setup is in the lab — the list hears about every
+              Keyboards were just the opening move. The rest of the setup is in the lab. The list hears about every
               drop first.
             </p>
           </div>
@@ -382,7 +382,7 @@ export default async function HomePage() {
           />
           <Reveal delay={0.15}>
             <p className="mt-8 max-w-lg text-[15px] leading-relaxed text-paper/70 md:text-base">
-              Gamers, streamers, coders, students, the nine-to-five — everybody lives at a desk, so it might as well go
+              Gamers, streamers, coders, students, the nine-to-five. Everybody lives at a desk, so it might as well go
               hard. Keyboards are chapter one. Chairs, desks and the rest of the room are loading.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">

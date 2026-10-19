@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo, Geist, Geist_Mono } from "next/font/google";
 import { INTRO_SCRIPT } from "@/components/brand/brand-loader";
+import { TabTitle } from "@/components/brand/tab-title";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
 
@@ -26,7 +27,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "RACKET — Mechanical Keyboards & Desk Setup Gear | Make Some Noise.",
+    default: "RACKET · Mechanical Keyboards & Desk Setup Gear | Make Some Noise.",
     template: "%s · RACKET",
   },
   description: siteConfig.description,
@@ -69,12 +70,12 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "RACKET",
     locale: "en_IN",
-    title: "RACKET — Mechanical Keyboards & Desk Setup Gear",
+    title: "RACKET · Mechanical Keyboards & Desk Setup Gear",
     description: siteConfig.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "RACKET — Mechanical Keyboards & Desk Setup Gear",
+    title: "RACKET · Mechanical Keyboards & Desk Setup Gear",
     description: siteConfig.description,
   },
 };
@@ -137,7 +138,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(SITE_JSON_LD).replace(/</g, "\\u003c") }}
         />
       </head>
-      <body className="min-h-dvh bg-paper text-ink">{children}</body>
+      <body className="min-h-dvh bg-paper text-ink">
+        <TabTitle />
+        {children}
+      </body>
     </html>
   );
 }

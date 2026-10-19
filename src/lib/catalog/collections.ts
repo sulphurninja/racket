@@ -17,9 +17,9 @@ function stackHero(slug: string, alt: string): ImageAsset {
 /** Every stack ships the board today; the mat and caps are honest "loading" teasers. */
 function stackPieces(board: string) {
   return [
-    { label: `${board} — shipping now`, status: "live" as const },
-    { label: "Themed art desk mat — loading", status: "loading" as const },
-    { label: "Custom keycap set — loading", status: "loading" as const },
+    { label: `${board}. Shipping now`, status: "live" as const },
+    { label: "Themed art desk mat. Loading", status: "loading" as const },
+    { label: "Custom keycap set. Loading", status: "loading" as const },
   ];
 }
 
@@ -53,7 +53,7 @@ export const COLLECTIONS: CollectionDefinition[] = [
     eyebrow: "The stack · 01",
     headline: "Ice in the veins.",
     description:
-      "The K75 Glacier Blue, a glacial-art desk mat and matching keycaps. The board ships today — the rest of the stack is loading.",
+      "The K75 Glacier Blue, a glacial-art desk mat and matching keycaps. The board ships today. The rest of the stack is loading.",
     scene: "glacier",
     heroImage: stackHero("frostbite", "RACKET K75 Glacier Blue on an ice-crystal art desk mat"),
     stack: stackPieces("K75 Glacier Blue"),
@@ -66,7 +66,7 @@ export const COLLECTIONS: CollectionDefinition[] = [
     eyebrow: "The stack · 02",
     headline: "Outside, indoors.",
     description:
-      "The K75 Cedar Green, a meadow-art desk mat and matching keycaps. The board ships today — the rest of the stack is loading.",
+      "The K75 Cedar Green, a meadow-art desk mat and matching keycaps. The board ships today. The rest of the stack is loading.",
     scene: "cedar",
     heroImage: stackHero("touch-grass", "RACKET K75 Cedar Green on a meadow-art desk mat"),
     stack: stackPieces("K75 Cedar Green"),
@@ -79,7 +79,7 @@ export const COLLECTIONS: CollectionDefinition[] = [
     eyebrow: "The stack · 03",
     headline: "Head in the clouds.",
     description:
-      "The K75 Cloud Blue, a dreamy sky-art desk mat and matching keycaps. The board ships today — the rest of the stack is loading.",
+      "The K75 Cloud Blue, a dreamy sky-art desk mat and matching keycaps. The board ships today. The rest of the stack is loading.",
     scene: "cloud",
     heroImage: stackHero("daydream", "RACKET K75 Cloud Blue on an anime sky-art desk mat"),
     stack: stackPieces("K75 Cloud Blue"),
@@ -92,7 +92,7 @@ export const COLLECTIONS: CollectionDefinition[] = [
     eyebrow: "The stack · 04",
     headline: "Lights off. Locked in.",
     description:
-      "The K75 Midnight, a neon-city desk mat and matching keycaps. The board ships today — the rest of the stack is loading.",
+      "The K75 Midnight, a neon-city desk mat and matching keycaps. The board ships today. The rest of the stack is loading.",
     scene: "midnight",
     heroImage: stackHero("blackout", "RACKET K75 Midnight on a cyberpunk city-art desk mat"),
     stack: stackPieces("K75 Midnight"),
@@ -107,7 +107,7 @@ export function getCollectionDefinition(slug: string) {
 export const STACK_COLLECTIONS = COLLECTIONS.filter((c) => c.stack);
 export const COLORWAY_COLLECTIONS = STACK_COLLECTIONS;
 
-/** Which stack a colorway belongs to — used when seeding product → collection links. */
+/** Which stack a colorway belongs to. Used when seeding product to collection links. */
 export const STACK_SLUG_BY_COLORWAY: Record<ColorwayId, string> = {
   glacier: "frostbite",
   cedar: "touch-grass",

@@ -82,7 +82,7 @@ function productJsonLd(product: Product) {
   };
 }
 
-/** BreadcrumbList + FAQPage alongside Product — strong signals for rich results and answer engines. */
+/** BreadcrumbList + FAQPage alongside Product. Strong signals for rich results and answer engines. */
 function supportingJsonLd(product: Product) {
   const colorway = getColorway(productColorways(product)[0]);
   const graph: object[] = [

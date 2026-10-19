@@ -50,7 +50,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
   );
 });
 
-/** Arrow that slides on parent hover — used in CTAs. */
+/** Arrow that slides on parent hover. Used in CTAs. */
 export function ArrowGlyph({ className }: { className?: string }) {
   return (
     <span className={cn("relative inline-block h-[1em] w-[1.1em] overflow-hidden", className)} aria-hidden>

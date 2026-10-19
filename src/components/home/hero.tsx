@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useCallback, useEffect, useState } from "react";
+import { setLiveTitle } from "@/components/brand/tab-title";
 import { COLORWAYS, type ColorwayId } from "@/config/colorways";
 import { formatMoney } from "@/lib/money";
 import { cn } from "@/lib/utils";
@@ -14,6 +15,13 @@ export type HeroSlide = {
   priceMinor: number;
   priceConfirmed: boolean;
   image: { url: string; alt: string };
+};
+
+const TAB_MARK: Record<ColorwayId, string> = {
+  glacier: "🧊",
+  cedar: "🌿",
+  cloud: "☁️",
+  midnight: "🖤",
 };
 
 const DURATION = 3000;
@@ -50,6 +58,10 @@ export function Hero({ slides }: { slides: HeroSlide[] }) {
 
   const slide = slides[index];
   const cw = COLORWAYS[slide.colorway];
+
+  useEffect(() => {
+    setLiveTitle(`${TAB_MARK[slide.colorway]} ${cw.shortName} · RACKET`);
+  }, [slide.colorway, cw.shortName]);
   const rise = { ...RISE, delay: index === 0 ? (introDelay ?? 0) : 0 };
   const facing = introDelay !== null;
 

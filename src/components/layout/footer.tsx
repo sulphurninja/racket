@@ -22,7 +22,7 @@ export async function Footer() {
               hears first.
             </h2>
             <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-paper/60">
-              New colorways, new categories, restocks — straight to your inbox before anyone else. Zero spam, all
+              New colorways, new categories, restocks. Straight to your inbox before anyone else. Zero spam, all
               signal.
             </p>
             <NewsletterForm className="mt-8" />

@@ -8,7 +8,7 @@ import { SEED_PRODUCTS } from "./seed-data";
 import type { CatalogQuery, Product, ProductCardData } from "./types";
 
 /**
- * Catalog repository — the only module the UI uses to read catalog data.
+ * Catalog repository. The only module the UI uses to read catalog data.
  *
  * Phase 1: backed by the in-repo development catalog.
  * Phase 2: the `source()` function switches to Mongoose queries; callers and

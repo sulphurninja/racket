@@ -18,8 +18,8 @@ export async function generateMetadata({ params }: PageProps<"/collections/[slug
   const collection = await getCollection(slug);
   if (!collection) return { title: "Collection not found" };
   const title = collection.stack
-    ? `${collection.title} Stack — Keyboard + Desk Mat + Keycaps`
-    : `${collection.title} — 75% Mechanical Keyboards`;
+    ? `${collection.title} Stack. Keyboard, desk mat and keycaps`
+    : `${collection.title}. 75% mechanical keyboards`;
   return {
     title,
     description: collection.description,

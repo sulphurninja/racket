@@ -33,7 +33,7 @@ export const COLORWAYS: Record<ColorwayId, Colorway> = {
     scene: "cedar",
     mood: "Grounded · Warm · Quiet",
     description:
-      "Sage accents on a lavender-grey case with milk-white alphas. The calm one — until you start typing.",
+      "Sage accents on a lavender-grey case with milk-white alphas. The calm one, until you start typing.",
     dark: false,
   },
   glacier: {

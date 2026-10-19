@@ -79,7 +79,7 @@ export function ProductPurchase({ product, family }: { product: PurchaseProduct;
         <Price minor={variant.priceMinor} compareAtMinor={variant.compareAtMinor} className="text-2xl" />
       </div>
       {!product.priceConfirmed ? (
-        <DevNotice className="mt-3">Preview price — the real number drops with the launch.</DevNotice>
+        <DevNotice className="mt-3">Preview price. The real number drops with the launch.</DevNotice>
       ) : null}
 
       <p className="mt-6 text-[15px] leading-relaxed text-ink/70">{product.summary}</p>

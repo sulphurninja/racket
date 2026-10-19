@@ -11,7 +11,7 @@ export default function AccountPage() {
       <Emblem className="w-14 opacity-80" title={null} />
       <h1 className="type-display mt-8 text-[clamp(2.6rem,6vw,5rem)]">Accounts drop with checkout.</h1>
       <p className="mt-5 max-w-md text-[15px] leading-relaxed text-ink/65">
-        Sign-in, order history, saved addresses — all landing with checkout. Till then your cart and wishlist live
+        Sign-in, order history, saved addresses. All landing with checkout. Till then your cart and wishlist live
         safely on this device.
       </p>
       <Button asChild size="lg" className="mt-9">

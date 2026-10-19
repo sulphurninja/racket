@@ -9,7 +9,7 @@ export const siteConfig = {
   name: "RACKET",
   tagline: "Make some noise.",
   description:
-    "RACKET makes loud-looking, great-sounding desk gear: 75% gasket-mount, hot-swap mechanical keyboards with RGB — and chairs, desks and desk mats next. For gamers, creators and anyone whose setup is their statement.",
+    "RACKET makes loud-looking, great-sounding desk gear: 75% gasket-mount, hot-swap mechanical keyboards with RGB, plus chairs, desks and desk mats next. For gamers, creators and anyone whose setup is their statement.",
   url: SITE_URL,
   locale: "en-IN",
   currency: "INR",

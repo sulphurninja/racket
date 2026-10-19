@@ -36,7 +36,7 @@ export function addToCart(v: AddableVariant, quantity = 1, openDrawer = true) {
   if (added === 0) {
     toast({ title: "Maximum quantity reached", description: v.title, tone: "error" });
   } else if (capped) {
-    toast({ title: `Added ${added} — that's the most we can hold for you`, description: v.title });
+    toast({ title: `Added ${added}. That's the most we can hold for you`, description: v.title });
   } else if (!openDrawer) {
     toast({ title: "Added to cart", description: v.title, action: { label: "View", onClick: () => useCartStore.getState().openDrawer() } });
   }

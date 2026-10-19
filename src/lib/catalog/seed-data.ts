@@ -90,7 +90,7 @@ const STANDARD_FAQS = [
   },
   {
     q: "When will my order ship?",
-    a: "Soon. This store is in preview — dispatch timelines go live at checkout the moment we start shipping.",
+    a: "Soon. This store is in preview. Dispatch timelines go live at checkout the moment we start shipping.",
   },
   {
     q: "What warranty is included?",
@@ -103,23 +103,23 @@ function highlights(colorway: ColorwayId): Highlight[] {
   return [
     {
       id: "gasket",
-      eyebrow: "01 — Feel",
+      eyebrow: "Feel",
       title: "Softly sprung. Zero slap.",
       body: "Gasket structure plus a single-key slotted PCB. Every press lands cushioned, not clacked-out. Your fingers will notice by row two.",
       image: img.detail,
     },
     {
       id: "sound",
-      eyebrow: "02 — Sound",
+      eyebrow: "Sound",
       title: "Five layers deep. All signal.",
-      body: "Five layers of noise reduction tune out the ping and the rattle. What’s left is that deep, round thock. Make some noise — the good kind.",
+      body: "Five layers of noise reduction tune out the ping and the rattle. What’s left is that deep, round thock. Make some noise. The good kind.",
       image: img.studio,
     },
     {
       id: "swap",
-      eyebrow: "03 — Make it yours",
+      eyebrow: "Make it yours",
       title: "Hot-swap. Commitment optional.",
-      body: "Reaper switches out of the box, hot-swap sockets underneath. Pull, push, done — rebuild the feel whenever the mood hits.",
+      body: "Reaper switches out of the box, hot-swap sockets underneath. Pull, push, done. Rebuild the feel whenever the mood hits.",
       image: img.lifestyle,
     },
   ];
@@ -143,7 +143,7 @@ function f75({ colorway, tagline, summary, description, featuredRank, createdAt,
   return {
     id: `p_f75_${colorway}`,
     slug,
-    title: `RACKET K75 — ${cw.name}`,
+    title: `RACKET K75 ${cw.name}`,
     family: "RACKET K75",
     category: "keyboards",
     subcategory: "Mechanical keyboards",
@@ -177,7 +177,7 @@ function f75({ colorway, tagline, summary, description, featuredRank, createdAt,
     featuredRank,
     status: "active",
     seo: {
-      title: `K75 ${cw.name} — 75% Gasket Mount Mechanical Keyboard`,
+      title: `K75 ${cw.name}. 75% gasket mount mechanical keyboard`,
       description: `The RACKET K75 in ${cw.name}: a 75% gasket-mount mechanical keyboard with hot-swap switches, RGB backlight, rotary knob and three-mode wireless. ${tagline}`,
     },
     createdAt,

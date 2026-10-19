@@ -20,7 +20,7 @@ export type StackItem = {
 const EASE = [0.16, 1, 0.3, 1] as const;
 const DURATION = 4500;
 
-/** Underglow per stack — the light that leaks out from under the pressed key. */
+/** Underglow per stack. The light that leaks out from under the pressed key. */
 const GLOW: Record<ColorwayId, string> = {
   glacier: "#8fd0ff",
   cedar: "#9ad6a6",

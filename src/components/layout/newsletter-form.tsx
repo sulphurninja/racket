@@ -28,7 +28,7 @@ export function NewsletterForm({ tone = "dark", className }: { tone?: "dark" | "
           setState({ kind: "error", message: parsed.error.issues[0]?.message });
           return;
         }
-        setState({ kind: "notice", message: "You're early — alerts open soon. We haven't stored your email yet." });
+        setState({ kind: "notice", message: "You're early. Alerts open soon. We haven't stored your email yet." });
       }}
     >
       <label htmlFor={`nl-${tone}`} className="sr-only">
