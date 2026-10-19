@@ -440,7 +440,7 @@ svg {
 
 /* ── brand loader ─────────────────────────────────────────── */
 
-/* ~3s total: emblem rises (0–1s), two light passes (1–2.6s), exit (2.7–3.2s). */
+/* Holds a full 3s, then dissolves. Emblem rises (0–1s), two light passes (1–2.6s), exit (3–3.56s). */
 .rk-loader {
   position: fixed;
   inset: 0;
@@ -449,7 +449,7 @@ svg {
   place-items: center;
   background: radial-gradient(60% 50% at 50% 45%, #1d1f26 0%, #0b0c0f 70%);
   pointer-events: none;
-  animation: rk-loader-exit 560ms var(--ease-in-out) 2700ms both;
+  animation: rk-loader-exit 560ms var(--ease-in-out) 3000ms both;
 }
 html[data-intro="skip"] .rk-loader {
   display: none;
@@ -465,16 +465,16 @@ html[data-intro="skip"] .rk-loader {
   animation: rk-shine 800ms var(--ease-in-out) 1000ms 2 both;
 }
 .rk-loader__mark {
-  animation: rk-mark-exit 520ms var(--ease-in-out) 2700ms both;
+  animation: rk-mark-exit 520ms var(--ease-in-out) 3000ms both;
 }
 .rk-loader__tag {
   animation:
     rk-rise 700ms var(--ease-out-expo) 650ms both,
-    rk-mark-exit 520ms var(--ease-in-out) 2650ms forwards;
+    rk-mark-exit 520ms var(--ease-in-out) 3000ms forwards;
 }
 .rk-loader__bar > span {
   transform-origin: left;
-  animation: rk-progress 2300ms var(--ease-in-out) 300ms both;
+  animation: rk-progress 2600ms var(--ease-in-out) 300ms both;
 }
 @keyframes rk-emblem-in {
   from {

@@ -5,8 +5,8 @@ import { BRAND_ASSETS } from "./marks";
  * across it twice while the bar fills, then the overlay dissolves into the hero.
  *
  * Pure CSS (see globals.css) so it never waits on hydration and never blocks
- * pointer input. Shown once per session on the homepage; skipped for returning
- * visitors and reduced-motion users via the inline script in the root layout.
+ * pointer input. Plays on every homepage load, including refresh, and holds
+ * for 3 seconds. Skipped off the homepage and for reduced-motion users.
  */
 export function BrandLoader() {
   const src = BRAND_ASSETS.emblem.metal;
@@ -32,5 +32,5 @@ export function BrandLoader() {
   );
 }
 
-/** Runs before first paint: skip the intro for returning visitors / reduced motion. */
-export const INTRO_SCRIPT = `(function(){try{var d=document.documentElement;var r=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(r||location.pathname!=='/'||sessionStorage.getItem('rk-intro')){d.setAttribute('data-intro','skip')}else{sessionStorage.setItem('rk-intro','1')}}catch(e){document.documentElement.setAttribute('data-intro','skip')}})()`;
+/** Runs before first paint: skip the intro off the homepage and for reduced motion. */
+export const INTRO_SCRIPT = `(function(){try{var d=document.documentElement;var r=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(r||location.pathname!=='/'){d.setAttribute('data-intro','skip')}}catch(e){document.documentElement.setAttribute('data-intro','skip')}})()`;
